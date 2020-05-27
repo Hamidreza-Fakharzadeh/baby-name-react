@@ -1,8 +1,3 @@
-import React from 'react';
-
-function BabyNamesData()
-{
-    let babyNames =
 [
     {
       "id": 0,
@@ -860,7 +855,3 @@ function BabyNamesData()
       "sex": "f"
     }
   ]
-  return (babyNames)
-}
-
-export default BabyNamesData;

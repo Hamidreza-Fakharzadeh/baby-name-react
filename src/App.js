@@ -1,12 +1,15 @@
 import React from 'react';
-import babyNamesData from './BabyNamesData';
+import Button from './Button'
 import './App.css';
+import './Grid.css'
+import BabyNamesData from './babyNamesData.json';
 
 function App() {
-  let myJson = babyNamesData
-  console.log(myJson)
   return (
-    <div className="App">
+    <div className="App container">
+      <div className = "main-div row">
+          <Button results = {BabyNamesData}/>
+      </div>
       
     </div>
   );

@@ -1,4 +1,19 @@
 .App {
+  margin-top: 20px;
   text-align: center;
+}
+.male {
+  background-color:#87ceff;
+  border-style: solid;
+}
+.female {
+  background-color: pink;
+  border-style: solid;
+}
+.male, .female {
+  padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-family: sans-serif;
 }
 
