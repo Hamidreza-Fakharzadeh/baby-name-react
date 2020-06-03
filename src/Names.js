@@ -1,12 +1,11 @@
 import React from 'react';
 
-
-function Button(props) {
+function Names(props) {
     return(
         props.results.map((obj,index) => {
-            if(obj.sex == "m") {
-                return(
-                    <button key = {index} className = "male lg-col-1 md-col-3 sm-col-2">{obj.name}</button>
+            if(obj.sex === "m") {
+            return(
+                <button key = {index}  className = "male lg-col-1 md-col-3 sm-col-2">{obj.name}</button>
                 )
             }else{
                 return(
@@ -19,4 +18,4 @@ function Button(props) {
 
     )
 }
-export default Button;
+export default Names;
