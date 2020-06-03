@@ -1,25 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Names from './Names';
 
 function Search(props) {
-    const[searchTerm,setSearchTerm] = React.useState("");
-    const[searchResult,setSearchResult] = React.useState(props.results);
+    const[searchTerm,setSearchTerm] = useState(props.results);
     const handelChange = event => {
-       setSearchTerm(event.target.value)
-       const resultUseEffect = props.results.filter(
-            babyName => 
-            babyName.name.toLowerCase().includes(searchTerm) 
-                 
+       const resultSearch = props.results.filter(
+           babyName => 
+           babyName.name.toLowerCase().includes(event.target.value.toLowerCase())
         )
-        setSearchResult(resultUseEffect)
-        console.log(resultUseEffect)
+        setSearchTerm(resultSearch)
     }
         return(
         <div>
             <nav>
-                <input type="text" placeholder="search..." onChange={handelChange} value ={searchTerm}></input>
+                <input type="text" placeholder="search..." onChange={handelChange} ></input>
             </nav>
-            <Names results = {searchResult}/>
+            <Names results = {searchTerm}/>
         </div>
     
     )
